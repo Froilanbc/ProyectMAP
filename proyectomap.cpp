@@ -66,6 +66,21 @@ public:
         cout<<" Ingrese el valor de y: "; cin>>y;
         cout<<" Ingrese el estado del lugar ( A=abierto, C=cerrado, D=desocupado ): "; cin>>estado;
         lista.insert(pair<string, TPoint>(nombre, {nombre, tipo, x, y, estado}));
+        
+        lista.insert(pair<string,TPoint>("UTEC" , {"UTEC","Universidad",20,18,'A'}));
+        lista.insert(pair<string,TPoint>("METRO" ,{"METRO","Supermercado",35,8,'A'}));
+        lista.insert(pair<string,TPoint>("MIFARMA" ,{"MIFARMA","Farmacia",18,89,'C'}));
+        lista.insert(pair<string,TPoint>("PUCP" ,{"PUCP","Universidad",89,64,'C'}));
+        lista.insert(pair<string,TPoint>("PETROPERÚ" ,{"PETROPERÚ","Grifo",5,13,'C'}));
+        lista.insert(pair<string,TPoint>("FUSEN" ,{"FUSEN","Chifa",33,56,'A'}));
+        lista.insert(pair<string,TPoint>("PIURANO" ,{"PIURANO","Restaurant",75,19,'A'}));
+        lista.insert(pair<string,TPoint>("RUSTICA" ,{"RUSTICA","Discoteca",36,11,'D'}));
+        lista.insert(pair<string,TPoint>("GOUPH" ,{"GOUPH","Bar",77,52,'A'}));
+        lista.insert(pair<string,TPoint>("ESTADIO_NACIONAL" ,{"ESTADIO_NACIONAL","Estadio",9,14,'C'}));
+        lista.insert(pair<string,TPoint>("HUACHIPA" ,{"HUACHIPA","ZoolÓgico",103,93,'A'}));
+        lista.insert(pair<string,TPoint>("BCP" ,{"BCP","Banco",45,15,'A'}));
+        lista.insert(pair<string,TPoint>("BBVA" ,{"BBVA","Banco",73,17,'C'}));
+        lista.insert(pair<string,TPoint>("HORNERO" ,{"HORNERO","Restaurant",12,35,'D'}));
         grabarArchivo();
     }
     
@@ -81,20 +96,6 @@ public:
     //lista de puntos (opcion 3)
     void listar()
     {
-        lista.insert(pair<string,TPoint>("UTEC" , {"UTEC","Universidad",20,18,'A'}));
-        lista.insert(pair<string,TPoint>("METRO" ,{"METRO","Supermercado",35,8,'A'}));
-        lista.insert(pair<string,TPoint>("MIFARMA" ,{"MIFARMA","Farmacia",18,89,'C'}));
-        lista.insert(pair<string,TPoint>("PUCP" ,{"PUCP","Universidad",89,64,'C'}));
-        lista.insert(pair<string,TPoint>("PETROPERÚ" ,{"PETROPERÚ","Grifo",5,13,'C'}));
-        lista.insert(pair<string,TPoint>("FUSEN" ,{"FUSEN","Chifa",33,56,'A'}));
-        lista.insert(pair<string,TPoint>("PIURANO" ,{"PIURANO","Restaurant",75,19,'A'}));
-        lista.insert(pair<string,TPoint>("RUSTICA" ,{"RUSTICA","Discoteca",36,11,'D'}));
-        lista.insert(pair<string,TPoint>("GOUPH" ,{"GOUPH","Bar",77,52,'A'}));
-        lista.insert(pair<string,TPoint>("ESTADIO_NACIONAL" ,{"ESTADIO_NACIONAL","Estadio",9,14,'C'}));
-        lista.insert(pair<string,TPoint>("HUACHIPA" ,{"HUACHIPA","ZoolÓgico",103,93,'A'}));
-        lista.insert(pair<string,TPoint>("BCP" ,{"BCP","Banco",45,15,'A'}));
-        lista.insert(pair<string,TPoint>("BBVA" ,{"BBVA","Banco",73,17,'C'}));
-        lista.insert(pair<string,TPoint>("HORNERO" ,{"HORNERO","Restaurant",12,35,'D'}));
         for (auto it : lista) 
         {
             auto dato = it.second;
